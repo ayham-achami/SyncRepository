@@ -35,6 +35,10 @@ extension Migration: MigrationContext {
     public func create<T>(_ model: T.Type) where T: Manageable {
         create(model.className())
     }
+    
+    public func create<T>(_ model: T.Type, value: T) where T: Manageable {
+        create(model.className(), value: value)
+    }
 
     public func delete<T>(_ model: T.Type) where T: Manageable {
         deleteData(forType: model.className())
