@@ -29,12 +29,6 @@ public protocol MigrationContext {
     ///
     /// - Parameter model: Тип записи
     func create<T>(_ model: T.Type) where T: Manageable
-    
-    /// Создать новую запись в хранилище
-    /// - Parameters:
-    ///   - model: Тип записи
-    ///   - value: Подготовленное значение для записи
-    func create<T>(_ model: T.Type, value: T) where T: Manageable
 
     /// Удалить запись из хранилища
     ///
